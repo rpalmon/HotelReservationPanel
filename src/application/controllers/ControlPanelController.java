@@ -63,7 +63,7 @@ public class ControlPanelController {
 
     // Method to load the login scene on logout
     private void loadLoginScene() throws IOException {
-        loadScene("/fxml/login.fxml", "Login");
+        loadScene("login.fxml", "Login");
     }
 
     // Handles loading errors
