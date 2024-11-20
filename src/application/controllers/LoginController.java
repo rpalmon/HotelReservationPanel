@@ -38,7 +38,7 @@ public class LoginController {
 
     @FXML
     private void login(ActionEvent event) {
-        event.consume();
+//        event.consume();
         System.out.println("Username: " + username.getText() + " Password: " + password.getText());
 
         boolean nameCorrect = username.getText().equals("admin");

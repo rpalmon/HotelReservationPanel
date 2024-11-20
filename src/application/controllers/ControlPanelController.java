@@ -20,21 +20,18 @@ public class ControlPanelController {
     // Opens the Guest Book page
     @FXML
     private void openGuestBook(ActionEvent event) throws IOException {
-        event.consume();
         loadScene("guestbook.fxml", "Guest Book");
     }
 
     // Opens the Room Editor page
     @FXML
     private void openRoomEditor(ActionEvent event) throws IOException {
-        event.consume();
         loadScene("roomeditor.fxml", "Room Editor");
     }
 
     // Opens the Reservation Manager page
     @FXML
     private void openReservationManager(ActionEvent event) throws IOException {
-        event.consume();
         loadScene("reservationmanager.fxml", "Reservation Manager");
     }
 
@@ -64,7 +61,7 @@ public class ControlPanelController {
 
     // Method to load the login scene on logout
     private void loadLoginScene() throws IOException {
-        loadScene("login.fxml", "Login");
+        loadScene("/fxml/login.fxml", "Login");
     }
 
     // Handles loading errors
