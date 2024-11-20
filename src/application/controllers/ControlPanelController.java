@@ -48,7 +48,8 @@ public class ControlPanelController {
     // General method to load scenes
     private void loadScene(String fxmlFile, String title) throws IOException {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            // Ensure the path is absolute from the classpath root
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/" + fxmlFile));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = (Stage) logoutButton.getScene().getWindow();
@@ -58,6 +59,7 @@ public class ControlPanelController {
             handleLoadingError(e);
         }
     }
+
 
     // Method to load the login scene on logout
     private void loadLoginScene() throws IOException {
