@@ -40,9 +40,9 @@
       <TextField fx:id="totalCost" layoutX="280.0" layoutY="220.0" />
       <ChoiceBox fx:id="reservationStatus" layoutX="280.0" layoutY="250.0" prefHeight="25.0" prefWidth="140.0" />
       <CheckBox layoutX="280.0" layoutY="280.0" mnemonicParsing="false" />
-      <Button layoutX="152.0" layoutY="324.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Add" />
-      <Button layoutX="262.0" layoutY="324.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Delete" />
-      <Button layoutX="372.0" layoutY="324.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Update" />
-      <Button layoutX="377.0" layoutY="70.0" mnemonicParsing="false" text="Search" />
+      <Button layoutX="152.0" layoutY="324.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Add" onAction="#handleAddButton"/>
+      <Button layoutX="262.0" layoutY="324.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Delete"  onAction="#handleDeleteButton"/>
+      <Button layoutX="372.0" layoutY="324.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Update" onAction="#handleSaveButton"/>
+      <Button layoutX="377.0" layoutY="70.0" mnemonicParsing="false" text="Search" onAction="#handleSearchButton"/>
    </children>
 </Pane>

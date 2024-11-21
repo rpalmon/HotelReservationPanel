@@ -20,6 +20,7 @@ public class RoomEditorController extends BaseController {
     private Button deleteButton; // Delete button
     @FXML
     private Button updateButton; // Update button
+
     @FXML
     private TextField roomIDField; // TextField for Room ID
     @FXML
@@ -44,7 +45,7 @@ public class RoomEditorController extends BaseController {
         clearFields();
     }
 
-    // Function to handle save button click
+    // Function to handle add button click
     @FXML
     private void handleSaveButton(ActionEvent event) {
         // Retrieve data from input fields
