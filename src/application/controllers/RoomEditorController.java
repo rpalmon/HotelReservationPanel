@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 public class RoomEditorController extends BaseController {
@@ -24,7 +25,7 @@ public class RoomEditorController extends BaseController {
     @FXML
     private TextField roomNumberField; // TextField for Room Number
     @FXML
-    private TextField roomTypeField; // TextField for Room Type
+    private ComboBox<String> roomTypeField; // ComboBox for Room Type
     @FXML
     private TextField priceField; // TextField for Price
     @FXML
@@ -33,7 +34,13 @@ public class RoomEditorController extends BaseController {
     // Initialize method to set default values or behaviors
     @FXML
     public void initialize() {
-        // Example: You can initialize fields or set default values if needed.
+        // Set default options for the ComboBox
+        roomTypeField.getItems().addAll("Single", "Double", "Suite");
+
+        // Optionally, set a default value for the ComboBox
+        roomTypeField.setValue("Single");
+
+        // Clear all fields
         clearFields();
     }
 
@@ -43,7 +50,7 @@ public class RoomEditorController extends BaseController {
         // Retrieve data from input fields
         String roomID = roomIDField.getText();
         String roomNumber = roomNumberField.getText();
-        String roomType = roomTypeField.getText();
+        String roomType = roomTypeField.getValue(); // Get selected value from ComboBox
         String price = priceField.getText();
         boolean isAvailable = availableCheckBox.isSelected();
 
@@ -72,7 +79,7 @@ public class RoomEditorController extends BaseController {
         // Retrieve data from input fields
         String roomID = roomIDField.getText();
         String roomNumber = roomNumberField.getText();
-        String roomType = roomTypeField.getText();
+        String roomType = roomTypeField.getValue(); // Get selected value from ComboBox
         String price = priceField.getText();
         boolean isAvailable = availableCheckBox.isSelected();
 
@@ -87,7 +94,7 @@ public class RoomEditorController extends BaseController {
     private void clearFields() {
         roomIDField.clear();
         roomNumberField.clear();
-        roomTypeField.clear();
+        roomTypeField.setValue(null); // Clear ComboBox selection
         priceField.clear();
         availableCheckBox.setSelected(false);
     }

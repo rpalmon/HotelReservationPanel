@@ -44,6 +44,6 @@
       </Button>
 
       <!-- Logout Button -->
-      <Button fx:id="logoutButton" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="80.0" text="Logout" />
+      <Button fx:id="logoutButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" prefHeight="35.0" prefWidth="81.0" text="Logout" />
    </children>
 </Pane>
