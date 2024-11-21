@@ -12,7 +12,6 @@ public abstract class BaseController {
 
     public void handleBackButton(ActionEvent event) {
         try {
-            // Load the Control Panel FXML
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/controlpanel.fxml"));
             Parent root = loader.load();
 
